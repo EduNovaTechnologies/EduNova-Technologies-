@@ -781,6 +781,23 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
+  
+<a href="#home" id="backToTop" aria-label="Back to top"
+   style="position:fixed;bottom:20px;right:20px;z-index:999;
+   display:none;background:#174EA6;color:white;
+   width:48px;height:48px;border-radius:50%;
+   text-align:center;line-height:48px;font-size:24px;
+   text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+  ↑
+</a>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+</script>
 </body>
 </html>
 
