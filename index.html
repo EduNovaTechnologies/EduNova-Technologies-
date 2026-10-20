@@ -424,6 +424,121 @@
 .quote-button:hover {
   background: #2874D0;
 }
+    
+/* EduNova Technologies - modern homepage */
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 32px;
+  padding: 56px 36px;
+  margin: 24px 0;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0b1f3a, #123b70);
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.18);
+}
+
+.hero .tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(125, 211, 252, 0.5);
+  border-radius: 999px;
+  color: #7dd3fc;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.hero h2 {
+  margin: 18px 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.hero h2 span {
+  color: #7dd3fc;
+}
+
+.hero > div > p {
+  max-width: 580px;
+  color: #dbeafe;
+  line-height: 1.8;
+}
+
+.hero .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hero .btn-primary {
+  background: #38bdf8;
+  color: #082032;
+  border: 1px solid #38bdf8;
+}
+
+.hero .btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #93c5fd;
+}
+
+.hero-art {
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-art .symbol {
+  margin-bottom: 18px;
+  font-size: clamp(3rem, 7vw, 5rem);
+}
+
+.hero-art h3 {
+  color: #ffffff;
+  font-size: 1.45rem;
+}
+
+.hero-art p {
+  color: #dbeafe;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 20px;
+    margin: 16px 0;
+    border-radius: 18px;
+  }
+
+  .hero h2 {
+    font-size: 2.1rem;
+  }
+
+  .hero .actions {
+    flex-direction: column;
+  }
+
+  .hero .actions .btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero-art {
+    padding: 22px 16px;
+  }
+}
   </style>
 </head>
 <body>
