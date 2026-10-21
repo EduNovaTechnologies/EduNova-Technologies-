@@ -795,6 +795,51 @@ nav a {
     margin: 20px auto 8px;
   }
 }
+    
+/* Compact header and navigation */
+header {
+  padding: 12px 16px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+header p {
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+nav {
+  gap: 8px;
+}
+
+nav a {
+  font-size: 0.85rem;
+  padding: 6px 8px;
+}
+
+nav .btn,
+nav a.btn {
+  padding: 8px 12px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 12px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 5px 6px;
+  }
+}
   </style>
 </head>
 <body>
