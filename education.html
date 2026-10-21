@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore EduNova Education: Maths Made Simple Junior School, Maths Made Simple Senior School and EduNova Kids.">
+  <title>EduNova Education | EduNova Technologies</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fc;
+      color: #203047;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #123b70;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(25px, 5vw, 36px);
+      margin-bottom: 6px;
+    }
+
+    nav {
+      background: #09294e;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 38px 18px 20px;
+    }
+
+    .intro h2 {
+      color: #123b70;
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      max-width: 650px;
+      margin: auto;
+      color: #526174;
+    }
+
+    .products {
+      max-width: 1050px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 15px rgba(18, 59, 112, 0.09);
+      border-top: 5px solid #2563eb;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .symbol {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #123b70;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #526174;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #123b70;
+      color: white;
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    .back {
+      text-align: center;
+      padding: 10px 15px 35px;
+    }
+
+    .back a {
+      color: #123b70;
+    }
+
+    footer {
+      background: #09294e;
+      color: white;
+      text-align: center;
+      padding: 20px 12px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      .products {
+        padding: 14px;
+        gap: 15px;
+      }
+
+      .card {
+        padding: 21px 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EduNova Education</h1>
+    <p>A learning division of EduNova Technologies</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#products">Our Education Products</a>
+  </nav>
+
+  <section class="intro">
+    <h2>Learning Made Easier</h2>
+    <p>
+      Discover educational resources designed to support
+      young children, junior school learners and senior
+      school learners on their learning journey.
+    </p>
+  </section>
+
+  <main class="products" id="products">
+
+    <article class="card">
+      <div class="symbol">📘</div>
+      <h3>Maths Made Simple — Junior School</h3>
+      <p>
+        Build confidence in mathematics through revision
+        papers, worked examples, practice quizzes and
+        learner-friendly explanations for Grades 7–9.
+      </p>
+      <a class="btn"
+         href="https://edunovatechnologies.github.io/MathMadeSimple-/"
+         target="_blank" rel="noopener noreferrer">
+        Visit Junior Maths →
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">📗</div>
+      <h3>Maths Made Simple — Senior School</h3>
+      <p>
+        A growing collection of senior school mathematics
+        notes, worked examples, practice activities and
+        revision resources.
+      </p>
+      <a class="btn"
+         href="senior-maths.html">
+        Explore Senior Maths →
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">🧸</div>
+      <h3>EduNova Kids</h3>
+      <p>
+        Fun learning experiences for young children,
+        including numbers, letters, counting, shapes,
+        reading and interactive educational activities.
+      </p>
+      <a class="btn"
+         href="edunova-kids.html">
+        Explore EduNova Kids →
+      </a>
+    </article>
+
+  </main>
+
+  <div class="back">
+    <a href="index.html">← Back to EduNova Technologies</a>
+  </div>
+
+  <footer>
+    <p>© 2026 EduNova Technologies. All rights reserved.</p>
+    <p>Education • Technology • Innovation</p>
+  </footer>
+
+</body>
+</html>
