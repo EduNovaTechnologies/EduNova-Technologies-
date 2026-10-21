@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduNova Kids offers fun early learning activities in numbers, letters, shapes and reading.">
+  <title>EduNova Kids | EduNova Education</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf0;
+      color: #26354a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #123b70;
+      color: white;
+      text-align: center;
+      padding: 30px 16px;
+    }
+
+    header h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      margin: 0 0 8px;
+    }
+
+    nav {
+      background: #09294e;
+      padding: 13px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      max-width: 950px;
+      margin: auto;
+      padding: 22px 16px;
+    }
+
+    .welcome {
+      text-align: center;
+      background: white;
+      border-radius: 16px;
+      padding: 28px 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    }
+
+    .welcome .emoji {
+      font-size: 55px;
+    }
+
+    h2, h3 {
+      color: #123b70;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .activity {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      border-bottom: 5px solid #f4b942;
+      box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    }
+
+    .activity .emoji {
+      font-size: 38px;
+    }
+
+    button {
+      background: #123b70;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 15px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    .game {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    #feedback {
+      font-weight: bold;
+      min-height: 28px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 22px;
+      color: #123b70;
+    }
+
+    footer {
+      background: #09294e;
+      color: white;
+      text-align: center;
+      padding: 20px 12px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌟 EduNova Kids 🌟</h1>
+    <p>Discover, Play and Learn!</p>
+    <p>A learning product by EduNova Education</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Company Home</a>
+    <a href="education.html">EduNova Education</a>
+  </nav>
+
+  <main>
+    <section class="welcome">
+      <div class="emoji">🧸 📚 🎨</div>
+      <h2>Welcome, Little Learners!</h2>
+      <p>
+        Explore numbers, letters, shapes and reading
+        through fun activities designed to make learning
+        enjoyable.
+      </p>
+    </section>
+
+    <section class="activities">
+      <article class="activity">
+        <div class="emoji">🔢</div>
+        <h3>Numbers and Counting</h3>
+        <p>Start learning numbers and counting from 1 to 10.</p>
+      </article>
+
+      <article class="activity">
+        <div class="emoji">🔤</div>
+        <h3>Letters and Words</h3>
+        <p>Discover the alphabet and begin recognising letters.</p>
+      </article>
+
+      <article class="activity">
+        <div class="emoji">🔺</div>
+        <h3>Shapes and Colours</h3>
+        <p>Explore circles, squares, triangles and colours.</p>
+      </article>
+
+      <article class="activity">
+        <div class="emoji">📖</div>
+        <h3>Reading Corner</h3>
+        <p>Build early reading skills with simple words.</p>
+      </article>
+    </section>
+
+    <section class="game">
+      <h2>🎯 Let's Count!</h2>
+      <p>How many stars do you see?</p>
+      <p style="font-size:36px" aria-label="Three stars">⭐ ⭐ ⭐</p>
+
+      <button onclick="checkAnswer(2)">2</button>
+      <button onclick="checkAnswer(3)">3</button>
+      <button onclick="checkAnswer(4)">4</button>
+
+      <p id="feedback" aria-live="polite"></p>
+    </section>
+
+    <a class="back" href="education.html">
+      ← Back to EduNova Education
+    </a>
+  </main>
+
+  <footer>
+    <p>© 2026 EduNova Technologies</p>
+    <p>Education • Technology • Innovation</p>
+  </footer>
+
+  <script>
+    function checkAnswer(answer) {
+      const feedback = document.getElementById("feedback");
+
+      if (answer === 3) {
+        feedback.textContent = "🌟 Correct! There are 3 stars. Well done!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "😊 Good try! Count the stars again.";
+        feedback.style.color = "#b45309";
+      }
+    }
+  </script>
+
+</body>
+</html>
