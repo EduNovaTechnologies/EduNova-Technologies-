@@ -664,6 +664,63 @@
     display: block;
   }
   }
+    /* Why Choose EduNova section */
+.why-choose {
+  padding: 48px 24px;
+  margin: 28px 0;
+  background: #f8fbff;
+  border: 1px solid #e5eef9;
+  border-radius: 22px;
+}
+
+.why-choose .section-heading {
+  margin-bottom: 30px;
+}
+
+.why-choose .cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.why-choose .card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(18, 59, 112, 0.06);
+}
+
+.why-choose .card-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.why-choose .card h3 {
+  color: #123b70;
+  line-height: 1.4;
+  margin: 8px 0 10px;
+}
+
+.why-choose .card p {
+  color: #526174;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .why-choose {
+    padding: 30px 16px;
+  }
+
+  .why-choose .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose .card {
+    padding: 20px;
+  }
+    }
   </style>
 </head>
 <body>
@@ -923,7 +980,38 @@ https://drive.google.com/file/d/1PsMsgoT5Bv31X-7FWV_CWK3PkuTq--5t/view?usp=drive
         </div>
       </div>
     </section>
+<section class="why-choose">
+  <div class="section-heading">
+    <h2>Why Choose EduNova?</h2>
+    <p>Practical technology. Meaningful results.</p>
+  </div>
 
+  <div class="cards">
+    <article class="card">
+      <div class="card-icon">📱</div>
+      <h3>Mobile-Friendly Solutions</h3>
+      <p>Websites designed to work smoothly on phones, tablets and computers.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">🎓</div>
+      <h3>Education and Technology</h3>
+      <p>Digital resources and practical tools that support teaching and learning.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">💡</div>
+      <h3>Affordable Digital Services</h3>
+      <p>Flexible solutions planned around each client's needs and budget.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">🤝</div>
+      <h3>Personal Support</h3>
+      <p>Clear communication and agreed support throughout each project.</p>
+    </article>
+  </div>
+      </section>
 
 <section class="portfolio" id="portfolio">
   <div class="section-heading">
