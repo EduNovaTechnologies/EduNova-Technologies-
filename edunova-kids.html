@@ -211,5 +211,141 @@
     }
   </script>
 
+<!-- EduNova Kids: Let's Count Game -->
+<section id="edunova-counting-game" style="
+  max-width:600px;
+  margin:30px auto;
+  padding:24px;
+  background:#fff8dc;
+  border:3px solid #ffd166;
+  border-radius:20px;
+  text-align:center;
+  font-family:Arial,sans-serif;
+  color:#17324d;
+">
+  <h2 style="color:#1769aa;">🌟 Let's Count! 🌟</h2>
+  <p>Count the stars and choose the correct answer!</p>
+
+  <div id="counting-stars"
+       style="font-size:42px;line-height:1.5;margin:20px 0;"
+       aria-label="Stars to count">
+    ⭐ ⭐ ⭐
+  </div>
+
+  <p id="counting-question"
+     style="font-size:20px;font-weight:bold;">
+    How many stars are there?
+  </p>
+
+  <div id="counting-answers"
+       style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+    <button onclick="checkCountingAnswer(2)"
+      style="font-size:24px;padding:12px 22px;border:0;border-radius:12px;background:#bde0fe;">
+      2
+    </button>
+    <button onclick="checkCountingAnswer(3)"
+      style="font-size:24px;padding:12px 22px;border:0;border-radius:12px;background:#caffbf;">
+      3
+    </button>
+    <button onclick="checkCountingAnswer(4)"
+      style="font-size:24px;padding:12px 22px;border:0;border-radius:12px;background:#ffc8dd;">
+      4
+    </button>
+  </div>
+
+  <p id="counting-feedback"
+     role="status"
+     aria-live="polite"
+     style="font-size:20px;font-weight:bold;min-height:30px;">
+  </p>
+
+  <button id="counting-next" onclick="nextCountingQuestion()"
+    style="display:none;font-size:18px;padding:12px 20px;border:0;border-radius:12px;background:#1769aa;color:white;">
+    Next Question ➜
+  </button>
+
+  <p id="counting-score">Stars earned: 0</p>
+</section>
+
+<script>
+(function () {
+  const questions = [
+    {count: 1, emoji: "🍎", answers: [1, 2, 3]},
+    {count: 2, emoji: "🐻", answers: [1, 2, 3]},
+    {count: 3, emoji: "⭐", answers: [2, 3, 4]},
+    {count: 4, emoji: "🦋", answers: [3, 4, 5]},
+    {count: 5, emoji: "🌼", answers: [4, 5, 6]}
+  ];
+
+  let current = 0;
+  let score = 0;
+  let answered = false;
+
+  const stars = document.getElementById("counting-stars");
+  const answers = document.getElementById("counting-answers");
+  const feedback = document.getElementById("counting-feedback");
+  const next = document.getElementById("counting-next");
+  const scoreText = document.getElementById("counting-score");
+
+  function showQuestion() {
+    const q = questions[current];
+    answered = false;
+    stars.textContent = Array(q.count).fill(q.emoji).join(" ");
+    stars.setAttribute("aria-label", q.count + " items to count");
+    feedback.textContent = "";
+    next.style.display = "none";
+    answers.innerHTML = "";
+
+    q.answers.forEach(function (number) {
+      const button = document.createElement("button");
+      button.textContent = number;
+      button.style.cssText =
+        "font-size:24px;padding:12px 22px;border:0;" +
+        "border-radius:12px;background:#caffbf;cursor:pointer;";
+      button.addEventListener("click", function () {
+        checkAnswer(number);
+      });
+      answers.appendChild(button);
+    });
+  }
+
+  function checkAnswer(number) {
+    if (answered) return;
+    answered = true;
+
+    if (number === questions[current].count) {
+      score++;
+      feedback.textContent = "🎉 Well done! That is correct!";
+    } else {
+      feedback.textContent =
+        "😊 Good try! The correct answer is " +
+        questions[current].count + ".";
+    }
+
+    scoreText.textContent = "Stars earned: " + score;
+    next.textContent =
+      current === questions.length - 1
+        ? "Play Again ↻"
+        : "Next Question ➜";
+    next.style.display = "inline-block";
+  }
+
+  window.checkCountingAnswer = checkAnswer;
+
+  window.nextCountingQuestion = function () {
+    if (current === questions.length - 1) {
+      current = 0;
+      score = 0;
+      scoreText.textContent = "Stars earned: 0";
+    } else {
+      current++;
+    }
+    showQuestion();
+  };
+
+  showQuestion();
+})();
+</script>
+<!-- End EduNova Kids Counting Game -->
 </body>
 </html>
